@@ -8,5 +8,12 @@
         </div>
         <p>Welcome!</p>
         <p>Team Andaconda (yes, spelled weird on purpose) would like to formally welcome you to our site. We are but two math majors struggling wonderfully in this Hackathon.</p>
+        {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
     </body>
 </html>
