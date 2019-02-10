@@ -1,19 +1,25 @@
+{% load static %}
 <html>
     <head>
         <title>Andaconda</title>
+				<link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+                	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
     	<div>
             <h1><a href="/">Andaconda</a></h1>
         </div>
-        <p>Welcome!</p>
-        <p>Team Andaconda (yes, spelled weird on purpose) would like to formally welcome you to our site. We are but two math majors struggling wonderfully in this Hackathon.</p>
+        <pp style="background-color:#F0AA96;">Welcome!</p>
+        <pp style="background-color:#F0AA96;">Team Andaconda (yes, spelled weird on purpose) would like to formally welcome you to our site. We are but two math majors struggling wonderfully in this Hackathon.
+        </p>
         {% for post in posts %}
     <div>
         <p>published: {{ post.published_date }}</p>
         <h2><a href="">{{ post.title }}</a></h2>
-        <p>{{ post.text|linebreaksbr }}</p>
+        <pp style="background-color:#F0AA96;">{{ post.text|linebreaksbr }}</p>
     </div>
 {% endfor %}
+		<p>
+        	<img src="static/images/beeplot.jpg" alt="Bee Plot" style="width:780px;height:597px;"></p>
     </body>
 </html>
